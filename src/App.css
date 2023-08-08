@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
+  background-color: #282c34;
+  position: absolute;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.get-started {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.starter-page {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #aaffaa;
+  gap: 5rem;
+}
+.info-page {
+  background-color: #282c34;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.enchanting-page {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #aaffaa;
+}
+.rates {
+  color: white;
+  display: flex;
+  gap: 2em;
+}
+.rates-listed {
+  gap: 1em;
+  text-align: center;
+}
+.credits {
+  color: #aaffaa;
+  text-align: center;
+}
+#item-select {
+  color: #7788ff;
+}
+#desired-select {
+  color: #7788ff;
+}
+#clean-price {
+  color: #7788ff;
+}
+#enchant-price {
+  color: #7788ff;
+}
+#blessed-price {
+  color: #7788ff;
+}
+#destruction-price {
+  color: #7788ff;
+}
+#l2es-price {
+  color: #7788ff;
+}
+#crystals-value {
+  color: #7788ff;
+}
+#price-display {
+  color: #aaffaa
+}
+#path-display {
+  color: #448822;
+  width: 80%;
+}
+.p-rates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.info-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.credits {
+  position: absolute;
+  bottom: 2rem;
+}
+.items-desired {
+  display: flex;
+  gap: 4rem;
+}
+.scrolls {
+  display: flex;
+  gap: 2rem;
 }
