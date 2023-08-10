@@ -93,6 +93,7 @@ a:visited {
   color: #aaffaa
 }
 #path-display {
+  text-align: center;
   color: #448822;
   width: 80%;
 }

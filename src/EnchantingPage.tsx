@@ -109,6 +109,7 @@ export function EnchantingPage(): ReactElement {
           focused
           id="clean-price"
           label="Clean item price"
+          value={cleanPrice}
           onChange={(newValue) =>
             setCleanPrice(parseInt(newValue.target.value))
           }
@@ -118,6 +119,7 @@ export function EnchantingPage(): ReactElement {
           focused
           id="crystals-value"
           label="Crystallization value"
+          value={crystalsValue}
           onChange={(newValue) =>
             setCrystalsValue(parseInt(newValue.target.value))
           }
@@ -129,6 +131,7 @@ export function EnchantingPage(): ReactElement {
           focused
           id="enchant-price"
           label="Normal enchant scroll price"
+          value={prices.normalPrice}
           onChange={(newValue) =>
             setPrices({
               normalPrice: parseInt(newValue.target.value),
@@ -143,6 +146,7 @@ export function EnchantingPage(): ReactElement {
           focused
           id="blessed-price"
           label="Blessed enchant scroll price"
+          value={prices.blessedPrice}
           onChange={(newValue) =>
             setPrices({
               normalPrice: defaultPrices.normalPrice,
@@ -159,6 +163,7 @@ export function EnchantingPage(): ReactElement {
           focused
           id="destruction-price"
           label="Destruction enchant scroll price"
+          value={prices.destructionPrice}
           onChange={(newValue) =>
             setPrices({
               normalPrice: defaultPrices.normalPrice,
@@ -174,6 +179,7 @@ export function EnchantingPage(): ReactElement {
           focused
           id="l2es-price"
           label="L2es enchant scroll price"
+          value={prices.l2esPrice}
           onChange={(newValue) =>
             setPrices({
               normalPrice: defaultPrices.normalPrice,
