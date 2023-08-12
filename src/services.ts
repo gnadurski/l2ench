@@ -73,24 +73,20 @@ export function calculateEnchant({
           break;
       }
       let cheapestEnchant = Math.min(
-        (cost + scrollsPrices.normalPrice) / probability -
-          crystalsValue * (1 - probability),
-        (cost + scrollsPrices.blessedPrice) / probability -
-          itemCost * (1 - probability),
+        (cost + scrollsPrices.normalPrice - crystalsValue) / probability,
+        (cost + scrollsPrices.blessedPrice - itemCost) / probability + itemCost,
         cost + scrollsPrices.destructionPrice / probability,
         cost + scrollsPrices.l2esPrice
       );
 
       if (
         cheapestEnchant ===
-        (cost + scrollsPrices.normalPrice) / probability -
-          crystalsValue * (1 - probability)
+        (cost + scrollsPrices.normalPrice - crystalsValue) / probability
       ) {
         path = `${path} ${i} to ${i + 1} use normal,`;
       } else if (
         cheapestEnchant ===
-        (cost + scrollsPrices.blessedPrice) / probability -
-          itemCost * (1 - probability)
+        (cost + scrollsPrices.blessedPrice - itemCost) / probability + itemCost
       ) {
         path = `${path} ${i} to ${i + 1} use blessed,`;
       } else if (
