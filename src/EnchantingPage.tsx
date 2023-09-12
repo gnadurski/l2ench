@@ -13,15 +13,15 @@ import { Link } from "react-router-dom";
 import { calculateEnchant } from "./services";
 
 const defaultPrices = {
-  normalPrice: 35000000,
-  blessedPrice: 226000000,
+  normalPrice: 40000000,
+  blessedPrice: 200000000,
   destructionPrice: 70000000000,
   l2esPrice: 15000000000,
 };
 
 export function EnchantingPage(): ReactElement {
   const [item, setItem] = useState("100");
-  const [cleanPrice, setCleanPrice] = useState(100000000);
+  const [cleanPrice, setCleanPrice] = useState(1000000000);
   const [desired, setDesired] = useState("4");
   const [prices, setPrices] = useState(defaultPrices);
   const [crystalsValue, setCrystalsValue] = useState(0);
@@ -135,9 +135,9 @@ export function EnchantingPage(): ReactElement {
           onChange={(newValue) =>
             setPrices({
               normalPrice: parseInt(newValue.target.value),
-              blessedPrice: defaultPrices.blessedPrice,
-              destructionPrice: defaultPrices.destructionPrice,
-              l2esPrice: defaultPrices.l2esPrice,
+              blessedPrice: prices.blessedPrice,
+              destructionPrice: prices.destructionPrice,
+              l2esPrice: prices.l2esPrice,
             })
           }
         />
@@ -149,10 +149,10 @@ export function EnchantingPage(): ReactElement {
           defaultValue={prices.blessedPrice}
           onChange={(newValue) =>
             setPrices({
-              normalPrice: defaultPrices.normalPrice,
+              normalPrice: prices.normalPrice,
               blessedPrice: parseInt(newValue.target.value),
-              destructionPrice: defaultPrices.destructionPrice,
-              l2esPrice: defaultPrices.l2esPrice,
+              destructionPrice: prices.destructionPrice,
+              l2esPrice: prices.l2esPrice,
             })
           }
         />
@@ -166,10 +166,10 @@ export function EnchantingPage(): ReactElement {
           defaultValue={prices.destructionPrice}
           onChange={(newValue) =>
             setPrices({
-              normalPrice: defaultPrices.normalPrice,
-              blessedPrice: defaultPrices.blessedPrice,
+              normalPrice: prices.normalPrice,
+              blessedPrice: prices.blessedPrice,
               destructionPrice: parseInt(newValue.target.value),
-              l2esPrice: defaultPrices.l2esPrice,
+              l2esPrice: prices.l2esPrice,
             })
           }
         />
@@ -182,9 +182,9 @@ export function EnchantingPage(): ReactElement {
           defaultValue={prices.l2esPrice}
           onChange={(newValue) =>
             setPrices({
-              normalPrice: defaultPrices.normalPrice,
-              blessedPrice: defaultPrices.blessedPrice,
-              destructionPrice: defaultPrices.destructionPrice,
+              normalPrice: prices.normalPrice,
+              blessedPrice: prices.blessedPrice,
+              destructionPrice: prices.destructionPrice,
               l2esPrice: parseInt(newValue.target.value),
             })
           }
